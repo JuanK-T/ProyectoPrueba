@@ -1,8 +1,15 @@
+<head>
+    <title>Iniciar Sesion</title>
+</head>
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <h1>Bienvendido!</h1>
         </x-slot>
+
+        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Registrar</a>
+        </div>
 
         <x-jet-validation-errors class="mb-4" />
 

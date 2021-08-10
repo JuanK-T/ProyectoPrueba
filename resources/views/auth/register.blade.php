@@ -1,8 +1,15 @@
+<head>
+    <title>Registrar</title>
+</head>
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <h1 class="font-bold">Bienvenido!</h1>
         </x-slot>
+
+        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Iniciar Sesion</a>
+        </div>
 
         <x-jet-validation-errors class="mb-4" />
 
@@ -15,12 +22,12 @@
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Correo') }}" />
+                <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Contraseña') }}" />
+                <x-jet-label for="password" value="{{ __('Contrseña') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
@@ -48,7 +55,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('¿Ya estas registrado?') }}
+                    {{ __('¿Ya Estas Registrado?') }}
                 </a>
 
                 <x-jet-button class="ml-4">
