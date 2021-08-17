@@ -122,6 +122,9 @@
                         </x-slot>
                     </x-jet-dropdown>
                 </div>
+                <div class="ml-8">
+                    Notificaciones
+                </div>
             </div>
 
             <!-- Hamburger -->
