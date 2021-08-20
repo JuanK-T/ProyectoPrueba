@@ -26,4 +26,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
     Route::get('category/{category}', [PostController::class, 'category'])->name('posts.category');
 
     Route::get('/dashboard', [PostController::class, 'index'])->name('dashboard');
+
+    Route::get('tag/{tag}', [PostController::class, 'tag'])->name('posts.tag');
 });
