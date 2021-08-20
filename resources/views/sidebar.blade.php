@@ -1,6 +1,15 @@
 <x-app-layout>
 <x-slot name="header"><h2 class="font-semibold text-xl text-gray-800 leading-tight mt-3"></h2></x-slot>
 
+{{-- SOLO ES PARA QUE SE VEAN ALGUNAS COSAS --}}
+<div class="hidden bg-yellow-600"></div>
+<div class="hidden bg-green-600"></div>
+<div class="hidden bg-pink-600"></div>
+<div class="hidden bg-red-600"></div>
+<div class="hidden bg-indigo-600"></div>
+<div class="hidden bg-purple-600"></div>
+<div class="hidden bg-blue-600"></div>
+
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <div class="md:flex flex-col md:flex-row md:min-h-screen w-full max-h-full">
     {{-- Sidebar --}}

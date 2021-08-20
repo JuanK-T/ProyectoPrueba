@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<x-app-layout>
+
+</x-app-layout>
+
+
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -18,205 +23,13 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
-            @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  display: inline-block;
-  color: #868484;
-}
-
-img {
-  width: 80%;
-  height: auto;
-}
-
-nav, .inicio, .nosotros {
-  width: 80%;
-  margin: auto;
-}
-
-p {
-  font-size: 1.8rem;
-  color: #868484;
-}
-
-h2 {
-  font-size: 2.4rem;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: lighter;
-}
-
-.btn, .btn-primary, .btn-login, .btn-registro {
-  border: none;
-  border-radius: 3px;
-  padding: 0.8em 1.6em;
-  cursor: pointer;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-style: 1.5rem;
-  font-weight: 500;
-  transition: transform 100ms;
-}
-.btn:hover, .btn-primary:hover, .btn-login:hover, .btn-registro:hover {
-  transform: scale(1.1);
-}
-
-.btn-registro {
-  background-color: transparent;
-  border: 1px solid #868484;
-  font-size: small;
-  border-radius: 10px;
-  letter-spacing: 0.1px;
-}
-
-.btn-login {
-  background-color: #868484;
-  opacity: 0.8;
-  color: white;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #6495ED;
-  font-size: 1.8rem;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  border-top: 30px solid #343533;
-  width: 100%;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-nav ul {
-  display: flex;
-  padding: 0;
-}
-nav ul a {
-  padding: 10px;
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-nav ul a:hover {
-  color: #6495ED;
-  transform: scale(1.1);
-}
-
-.inicio, .nosotros {
-  padding-top: 140px;
-  padding-bottom: 50px;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.inicio .flex-item2, .nosotros .flex-item2 {
-  text-align: center;
-}
-.inicio h1, .nosotros h1 {
-  margin-top: 0;
-  padding-right: 20px;
-  font-size: 4rem;
-}
-.inicio p, .nosotros p {
-  padding-right: 20px;
-  padding-bottom: 10px;
-}
-.inicio img, .nosotros img {
-  border-radius: 5px;
-  width: 95%;
-}
-
-@media (min-width: 1400px) {
-  nav {
-    width: 60%;
-    margin: auto;
-  }
-}
-@media (max-width: 992px) {
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */
-
         </style>
     </head>
     <body class="antialiased">
-        <header id="menu">
-            <nav>
-                <h1>DestiCol</h1>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    @if (Route::has('login'))
-                            @auth
-                                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
-                            @else
-                                <a href="{{ route('login') }}" class="btn-login">Iniciar Sesion</a>
 
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="btn-registro">Registrar</a>
-                                @endif
-                            @endauth
-                    @endif
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Cuerpo de la Pagina Principal -->
-        <main class="container">
-            <div class="inicio" id="inicio">
-                <div class="flex-item1">
-                    <h1>Bienvenido a DestiCol</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis modi fugit temporibus porro atque, vel placeat impedit repellendus sint! </p>
-                    <div>
-                        <button class="btn-primary">Conoce mas</button>
-                    </div>
-                </div>
-                <div class="flex-item2">
-                    <img src="img/bogota.png" alt="Bogotá" title="Bogotá">
-                </div>
-            </div>
 
         {{-- <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
 
         </div> --}}
-    </body>
-</html>
+    {{-- </body>
+</html> --}}

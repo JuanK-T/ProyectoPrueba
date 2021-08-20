@@ -14,18 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
+});
 
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 
-    Route::get('/crear', [PostController::class, 'index'])->name('posts.index');
-
     Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
 
-    Route::get('/dashboard', function(){
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('category/{category}', [PostController::class, 'category'])->name('posts.category');
+
+    Route::get('/dashboard', [PostController::class, 'index'])->name('dashboard');
 });
