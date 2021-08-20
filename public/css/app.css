@@ -1185,6 +1185,9 @@ select {
 .ml-8 {
 	margin-left: 2rem;
 }
+.mb-8 {
+	margin-bottom: 2rem;
+}
 .block {
 	display: block;
 }
@@ -1241,6 +1244,9 @@ select {
 }
 .h-full {
 	height: 100%;
+}
+.h-72 {
+	height: 18rem;
 }
 .max-h-full {
 	max-height: 100%;
@@ -1307,6 +1313,9 @@ select {
 }
 .max-w-6xl {
 	max-width: 72rem;
+}
+.max-w-5xl {
+	max-width: 64rem;
 }
 .flex-1 {
 	flex: 1 1 0%;
