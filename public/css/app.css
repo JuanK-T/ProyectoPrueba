@@ -1988,10 +1988,6 @@ select {
 .ring-opacity-5 {
 	--tw-ring-opacity: 0.05;
 }
-.blur {
-	--tw-blur: blur(8px);
-	filter: var(--tw-filter);
-}
 .filter {
 	filter: var(--tw-filter);
 }
