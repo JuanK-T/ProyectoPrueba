@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
+    // Asignacion Masiva
+    protected $fillable = ['name', 'slug'];
 
      //Relacion Uno a muchos
     public function posts(){
