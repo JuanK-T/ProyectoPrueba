@@ -11,6 +11,11 @@ class Category extends Model
     // Asignacion Masiva
     protected $fillable = ['name', 'slug'];
 
+    public function getRouteKeyName()
+    {
+        return "slug";
+    }
+
      //Relacion Uno a muchos
     public function posts(){
         return $this->hasMany(Post::class);
