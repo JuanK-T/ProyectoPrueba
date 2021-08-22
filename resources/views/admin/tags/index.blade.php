@@ -19,7 +19,7 @@
 
                 <div class="my-4">
                     <a href="{{route('admin.tags.create')}}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3">
-                        Agregar Categoría
+                        Agregar Etiqueta
                     </a>
                 </div>
 
