@@ -10,6 +10,12 @@ class Post extends Model
     use HasFactory;
     protected $guarded = ['id', 'created_at', 'update_at'];
 
+    // URL Amigable
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     // Relacion uno a muchos inversa
     public function user(){
         return $this->belongsTo(User::class);

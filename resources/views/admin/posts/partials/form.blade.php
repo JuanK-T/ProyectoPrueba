@@ -1,5 +1,4 @@
-{{-- Input Oculto de IdUsuario --}}
-{!! Form::hidden('idUserFK', auth()->user()->id) !!}
+
 
 {{-- Input del Titulo del Post --}}
 {!! Form::label('name', 'Nombre:', ['class' => 'flex-auto text-xl']) !!}
@@ -60,19 +59,26 @@
     @enderror
 </div>
 
+{{-- InPut de Imagen --}}
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
     <div>
         <div class="image-wrapper">
-            <img id="picture" src="https://cdn.pixabay.com/photo/2017/06/23/14/50/colombia-2434911_960_720.jpg" alt="">
+            @isset ($post->image)
+                <img id="picture" src="{{Storage::url($post->image->url)}}" alt="">
+            @else
+                <img id="picture" src="https://cdn.pixabay.com/photo/2017/06/23/14/50/colombia-2434911_960_720.jpg" alt="">
+            @endisset
         </div>
     </div>
     <div>
-        {!! Form::label('file', 'Imagen:') !!}
-        {!! Form::file('file', ['accept' => 'image/*']) !!}
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique minima quo aspernatur veniam quam natus fugit, voluptas expedita voluptatibus enim in perspiciatis laudantium, laboriosam at adipisci sint laborum minus repellendus.</p>
+        {!! Form::label('file', 'Imagen:', ['class' => 'flex-auto text-xl mt-2']) !!}
         @error('file')
             <small class="text-red-500">{{$message}}</small>
         @enderror
+        <div class="flex bg-gray-100 p-1 w-full space-x-2 rounded-lg mb-4">
+            {!! Form::file('file', ['accept' => 'image/*', 'class' => 'flex py-3 px-4 rounded-lg w-full text-gray-500 font-semibold cursor-pointer']) !!}
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique minima quo aspernatur veniam quam natus fugit, voluptas expedita voluptatibus enim in perspiciatis laudantium, laboriosam at adipisci sint laborum minus repellendus.</p>
     </div>
 </div>
 
@@ -136,3 +142,15 @@
         reader.readAsDataURL(file);
     }
 </script>
+
+@if(session('info'))
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: '{{session("info")}}',
+        showConfirmButton: false,
+        timer: 1500
+    })
+</script>
+@endif

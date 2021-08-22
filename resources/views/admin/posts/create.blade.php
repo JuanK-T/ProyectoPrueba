@@ -19,6 +19,8 @@
                 <div class="px-3 py-4 flex justify-center">
                     <div class="flex flex-col p-8 bg-white rounded-xl">
                         {!! Form::open(['route' => 'admin.posts.store', 'autocomplete' => 'off', 'files' => true, 'enctype' => 'multipart/form-data']) !!}
+                            {{-- Input Oculto de IdUsuario --}}
+                            {!! Form::hidden('idUserFK', auth()->user()->id) !!}
                             @include('admin.posts.partials.form')
                             {!! Form::submit('Crear', ['class' => 'bg-gray-800 py-3 px-5 w-20 text-white  rounded-lg hover:shadow-lg transition duration-3000 cursor-pointer font-semibold']) !!}
 
