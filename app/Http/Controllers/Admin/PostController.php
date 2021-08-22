@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Tag;
 
+use Illuminate\Support\Facades\Storage;
+
 use App\Http\Requests\StorePostRequest;
+use Illuminate\Contracts\Cache\Store;
 
 class PostController extends Controller
 {
@@ -43,13 +46,29 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
+        $request->validate([
+            'file' => 'image|max:2048'
+        ]);
+
         $post = Post::create($request->all());
+
+        if($request->file('file')){
+
+            // $url = Storage::put('posts', $request->file('file')->store('public/posts'));
+            $imagenes = $request->file('file');
+            $url = Storage::put( 'public/posts', $imagenes);
+
+            $post->image()->create([
+                'url' => $url
+            ]);
+        }
 
         if($request->tags){
             $post->tags()->attach($request->tags);
         }
 
         return redirect()->route('admin.posts.edit', $post);
+
     }
 
     /**
