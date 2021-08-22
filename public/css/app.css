@@ -1122,6 +1122,10 @@ select {
 	margin-top: 0.75rem;
 	margin-bottom: 0.75rem;
 }
+.mx-4 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
 .ml-3 {
 	margin-left: 0.75rem;
 }
@@ -1687,17 +1691,17 @@ select {
 .p-1 {
 	padding: 0.25rem;
 }
-.p-10 {
-	padding: 2.5rem;
-}
 .p-4 {
 	padding: 1rem;
 }
-.p-3 {
-	padding: 0.75rem;
-}
 .p-8 {
 	padding: 2rem;
+}
+.p-10 {
+	padding: 2.5rem;
+}
+.p-3 {
+	padding: 0.75rem;
 }
 .px-4 {
 	padding-left: 1rem;
@@ -2088,6 +2092,11 @@ select {
 .hover\:scale-105:hover {
 	--tw-scale-x: 1.05;
 	--tw-scale-y: 1.05;
+	transform: var(--tw-transform);
+}
+.hover\:scale-50:hover {
+	--tw-scale-x: .5;
+	--tw-scale-y: .5;
 	transform: var(--tw-transform);
 }
 .hover\:border-gray-300:hover {
