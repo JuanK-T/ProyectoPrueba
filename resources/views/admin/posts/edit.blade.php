@@ -10,7 +10,7 @@
     @extends('sidebar')
     @section('contenido')
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-8">
-        <div class="text-gray-900 bg-gray-200 overflow-hidden shadow-x1 sm:rounded-lg px-4 py-4">
+        <div class="text-gray-900 static bg-gray-200 overflow-hidden shadow-x1 sm:rounded-lg px-4 py-4">
             <div class="p-4 flex">
                 <h1 class="text-3xl text-bold">
                     Formulario

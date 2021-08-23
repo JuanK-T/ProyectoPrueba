@@ -87,15 +87,15 @@
     <small class="text-red-500">{{$message}}</small>
 @enderror
 <div class="flex bg-gray-100 p-1 w-full space-x-2 rounded-lg mb-4">
-    {!! Form::textarea('extract', null, ['class' => 'flex py-3 px-4 rounded-lg w-full text-gray-500 font-semibold cursor-pointer hover:scale-50 transition duration-500']) !!}
+    {!! Form::textarea('extract', null, ['class' => 'flex py-3 px-4 rounded-lg w-full text-gray-500 font-semibold cursor-pointer']) !!}
 </div>
 
 {!! Form::label('contenido', 'Contenido del Post:', ['class' => 'flex-auto text-xl mt-2']) !!}
 @error('contenido')
     <small class="text-red-500">{{$message}}</small>
 @enderror
-<div class="flex bg-gray-100 p-1 w-full space-x-2 rounded-lg mb-4">
-    {!! Form::textarea('contenido', null, ['class' => 'flex py-3 px-4 rounded-lg w-full text-gray-500 font-semibold cursor-pointer hover:scale-50 transition duration-500']) !!}
+<div class="flex bg-gray-100 p-1 w-full z-50 rounded-lg mb-4">
+    {!! Form::textarea('contenido', null, ['class' => 'flex py-3 px-4 rounded-lg w-full text-gray-500 font-semibold cursor-pointer']) !!}
 </div>
 
 
