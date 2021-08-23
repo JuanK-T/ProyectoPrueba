@@ -11,7 +11,7 @@ class PostPolicy
     use HandlesAuthorization;
 
     // Regla de Autorizacion
-    public function author(?User $user, Post $post){
+    public function author(User $user, Post $post){
         if($user->id == $post->idUserFK){
             return true;
         }else{
@@ -20,7 +20,7 @@ class PostPolicy
     }
 
     // Esto no me permite ver los Blos en estado inactivo
-    public function published(User $user, Post $post){
+    public function published(?User $user, Post $post){
         if($post->status == 2){
             return true;
         }else{

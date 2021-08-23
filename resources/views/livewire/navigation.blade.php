@@ -19,18 +19,12 @@
         @endauth
 
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            {{-- Logotipo --}}
-                @auth
+                {{-- Logotipo --}}
                 <a href="/dashboard" class="flex-shrink-0 flex items-center">
                     <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
                     <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow">
                 </a>
-                @else
-                <a href="/" class="flex-shrink-0 flex items-center">
-                    <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
-                    <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow">
-                </a>
-                @endauth
+
 
                 {{-- Menu lg --}}
                 <div class="hidden sm:block sm:ml-6">
@@ -40,8 +34,8 @@
                         @auth
 
                         @else
-                            <a href="#" class="text-white px-3 py-2 text-sm" aria-current="page">Inicio</a>
-                            <a href="#" class="text-white px-3 py-2 text-sm" aria-current="page">Nosotros</a>
+                            <a href="/dashboard" class="text-white px-3 py-2 text-sm" aria-current="page">Inicio</a>
+                            <a href="/" class="text-white px-3 py-2 text-sm" aria-current="page">Nosotros</a>
                             <a href="#" class="text-white px-3 py-2  text-sm" aria-current="page">Servicios</a>
                             <a href="#" class="text-white px-3 py-2 text-sm" aria-current="page">Contacto</a>
                         @endauth

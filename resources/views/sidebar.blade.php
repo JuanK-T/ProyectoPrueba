@@ -11,6 +11,8 @@
 <div class="hidden bg-indigo-600"></div>
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+@auth
+
 <div class="md:flex flex-col md:flex-row md:min-h-screen w-full max-h-full">
     {{-- Sidebar --}}
     <div @click.away="open = false" class="flex flex-col w-full md:w-64 text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
@@ -69,6 +71,9 @@
             </nav>
         </div>
     </div>
+
+@endauth
   @yield('contenido')
 </div>
+
 </x-app-layout>
