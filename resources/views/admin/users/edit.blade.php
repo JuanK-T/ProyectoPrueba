@@ -13,7 +13,7 @@
         <div class="text-gray-900 bg-gray-200 overflow-hidden shadow-x1 sm:rounded-lg px-4 py-4">
             <div class="p-4 flex">
                 <h1 class="text-3xl text-bold">
-                    Formulario
+                    Asignacion de Roles
                 </h1>
             </div>
             <div class="px-3 py-4 flex justify-center">
