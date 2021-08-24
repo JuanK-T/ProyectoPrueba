@@ -15,6 +15,7 @@ use Illuminate\Contracts\Cache\Store;
 
 class PostController extends Controller
 {
+   
     /**
      * Display a listing of the resource.
      *
