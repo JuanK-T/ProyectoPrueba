@@ -11,7 +11,7 @@ use App\Models\Tag;
 use Illuminate\Support\Facades\Storage;
 
 use App\Http\Requests\PostRequest;
-use Illuminate\Contracts\Cache\Store;
+use Illuminate\Support\Facades\Cache;
 
 class PostController extends Controller
 {
@@ -61,6 +61,8 @@ class PostController extends Controller
             ]);
         }
 
+        Cache::flush();
+
         if($request->tags){
             $post->tags()->attach($request->tags);
         }
@@ -104,6 +106,8 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, Post $post)
     {
+        Cache::flush();
+
         // Regla de Autorizacion
         $this->authorize('author', $post);
 
@@ -141,6 +145,8 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        Cache::flush();
+
         // Regla de Autorizacion
         $this->authorize('author', $post);
         $post->delete();
