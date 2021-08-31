@@ -11,7 +11,11 @@ class Post extends Model
     // Asignacion Masiva
     protected $guarded = ['id', 'created_at', 'update_at'];
 
-
+    // URL Amigable
+    /* public function getRouteKeyName()
+    {
+        return 'slug';
+    } */
 
     // Relacion uno a muchos inversa
     public function user(){
