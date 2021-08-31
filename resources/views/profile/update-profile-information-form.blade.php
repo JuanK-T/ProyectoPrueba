@@ -22,7 +22,7 @@
                                         photoPreview = e.target.result;
                                     };
                                     reader.readAsDataURL($refs.photo.files[0]);
-                            " />
+                            " accept="image/*" />
 
                 <x-jet-label for="photo" value="{{ __('Foto de Usuario') }}" />
 

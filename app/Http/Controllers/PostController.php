@@ -18,19 +18,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        // Caches
-        if(request()->page){
-            $key = 'posts'.request()->page;
-        }else{
-            $key = 'posts';
-        }
 
-        if(Cache::has($key)){
-            $posts = Cache::get($key);
-        }else{
-            $posts = Post::where('status', 2)->latest('id')->paginate(8);
-            Cache::put($key, $posts);
-        }   
+
+        $posts = Post::where('status', 2)->latest('id')->paginate(8);
 
         $categories = Category::all();
 

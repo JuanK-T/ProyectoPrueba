@@ -21,7 +21,7 @@
                     {!! Form::model($post, ['route' => ['admin.posts.update', $post], 'method' => 'put', 'autocomplete' => 'off', 'files' => true, 'enctype' => 'multipart/form-data']) !!}
 
                         @include('admin.posts.partials.form')
-                        {!! Form::submit('Actualizar', ['class' => 'bg-gray-800 py-3 px-5 w-24 text-white  rounded-lg hover:shadow-lg transition duration-3000 cursor-pointer font-semibold']) !!}
+                        {!! Form::submit('Actualizar', ['class' => 'bg-gray-800 py-3 px-5 w-28 text-white  rounded-lg hover:shadow-lg transition duration-3000 cursor-pointer font-semibold']) !!}
 
                     {!! Form::close() !!}
                 </div>

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Cache;
 
 class PostController extends Controller
 {
-   
+
     /**
      * Display a listing of the resource.
      *
@@ -35,6 +35,7 @@ class PostController extends Controller
     {
         // Genero un array que solo me tome el campo name
         $categories = Category::pluck('name', 'id');
+
         $tags = Tag::all();
         return view('admin.posts.create', compact('categories', 'tags'));
     }

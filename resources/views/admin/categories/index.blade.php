@@ -68,26 +68,5 @@
             )
         </script>
     @endif
-
-    <script>
-        $('.formulario-eliminar').submit(function(e){
-            e.preventDefault();
-
-            Swal.fire({
-                title: '¿Estas Seguro?',
-                text: "Esta informacion se eliminara definitivamente!",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: '!Si, eliminar!',
-                cancelButtonText: 'Cancelar'
-                }).then((result) => {
-                if (result.isConfirmed) {
-                    this.submit();
-                }
-            })
-        })
-    </script>
 </body>
 </html>
