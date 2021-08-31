@@ -18,21 +18,21 @@
             </div>
             <div class="px-3 py-4 flex justify-center">
                 <div class="flex flex-col p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transform ">
-                    <div class="form-control">
-                        <p>Nombre:</p>
-                        <p>{{$user->name}}</p>
+                    <div class="form-control mb-2">
+                        <p class="text-lg font-bold">Nombre:</p>
+                        <p class="font-semibold text-gray-500">{{$user->name}}</p>
                     </div>
-                    <h2 class="">Listado de Roles</h2>
+                    <h2 class="mb-2">Listado de Roles</h2>
                     {!! Form::model($user, ['route' => ['admin.users.update', $user], 'method' => 'put']) !!}
                         @foreach ($roles as $role)
                             <div>
                                 <label for="">
-                                    {!! Form::checkbox('roles[]', $role->id, null, ['class' => 'mr-1']) !!}
+                                    {!! Form::checkbox('roles[]', $role->id, null, ['class' => 'mr-1 mb-2']) !!}
                                     {{$role->name}}
                                 </label>
                             </div>
                         @endforeach
-                        {!! Form::submit('Asignar Rol', ['class' => '']) !!}
+                        {!! Form::submit('Asignar Rol', ['class' => 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded']) !!}
                     {!! Form::close() !!}
                 </div>
             </div>

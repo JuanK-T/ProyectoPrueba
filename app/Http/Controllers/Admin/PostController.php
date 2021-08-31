@@ -107,7 +107,6 @@ class PostController extends Controller
      */
     public function update(PostRequest $request, Post $post)
     {
-        Cache::flush();
 
         // Regla de Autorizacion
         $this->authorize('author', $post);

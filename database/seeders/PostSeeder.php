@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Image;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class PostSeeder extends Seeder
@@ -26,6 +27,10 @@ class PostSeeder extends Seeder
             $post->tags()->attach([
                 rand(1, 4),
                 rand(5, 8)
+            ]);
+            $post->likeUsers()->attach([
+                rand(1, 10),
+                rand(1, 10)
             ]);
         }
     }

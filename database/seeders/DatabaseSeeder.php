@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Post;
+use App\Models\Reply;
 use App\Models\Tag;
 use Illuminate\Database\Seeder;
 
@@ -25,8 +27,13 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleSeeder::class);
 
         $this->call(UserSeeder::class);
+
         Category::factory(4)->create();
         Tag::factory(8)->create();
+
         $this->call(PostSeeder::class);
+
+        Comment::factory(100)->create();
+        Reply::factory(100)->create();
     }
 }

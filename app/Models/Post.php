@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    // Asignacion Masiva
     protected $guarded = ['id', 'created_at', 'update_at'];
 
 
@@ -21,9 +22,18 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    // Relacion de uno a muchos
+    public function comment(){
+        return $this->hasMany(Comment::class);
+    }
+
     // Relacion Muchos A Muchos
     public function tags(){
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function likeUsers(){
+        return $this->belongsToMany('App\Models\User');
     }
 
     //Relacion Uno A uno

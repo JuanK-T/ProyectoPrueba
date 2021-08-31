@@ -9,6 +9,7 @@ class Image extends Model
 {
     use HasFactory;
 
+    // Asignacion Masiva
     protected $fillable = ['url'];
 
     // Relacion Polimorfica

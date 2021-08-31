@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Reply;
 use App\Models\Tag;
 
 use Illuminate\Support\Facades\Cache;
@@ -65,7 +67,8 @@ class PostController extends Controller
             ->take(4)
             ->get();
 
-        return view('posts.show', compact('post', 'similares'));
+        $comments = Comment::all();
+        return view('posts.show', compact('post', 'similares', 'comments'));
     }
 
 
