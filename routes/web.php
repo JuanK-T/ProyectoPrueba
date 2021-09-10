@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailBoxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('posts/{post}', [PostController::class, 'show'])->name('posts.show');
+
+Route::get('category/{category}', [PostController::class, 'category'])->name('posts.category');
+
+Route::get('/dashboard', [PostController::class, 'index'])->name('dashboard');
+
+Route::get('tag/{tag}', [PostController::class, 'tag'])->name('posts.tag');
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+
+Route::resource('MailBox', MailBoxController::class);
+
+});
